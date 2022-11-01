@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+#cards-container {
+  justify-self: center;
+  align-self: center;
+  background-color: black;
+  width:fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+img {
+  margin: 10px;
+}
+
+#message {
+  font-family: comic sans ms;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#reset {
+  margin-left: 30px;
+}

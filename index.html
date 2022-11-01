@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <h2>Flip over any two cards and see if they match.
+        You can only miss twice!
+        <button id="reset" onclick="hardReset()">Try Again</button>
+    </h2>
+    
+    <div id="cards-container">
+      <img src="images/ace-of-spade.jpg" alt="" id="1" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="2" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="3" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="4" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="5" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="6" onclick="switcheroo(this.id)">
+      <br>
+      <img src="images/ace-of-spade.jpg" alt="" id="7" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="8" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="9" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="10" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="11" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="12" onclick="switcheroo(this.id)">
+      <br>
+      <img src="images/ace-of-spade.jpg" alt="" id="13" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="14" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="15" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="16" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="17" onclick="switcheroo(this.id)">
+      <img src="images/ace-of-spade.jpg" alt="" id="18" onclick="switcheroo(this.id)">
+    </div>
+    <h1 id="message"></h1>
+  </body>
+</html>
