@@ -67,7 +67,7 @@ function softReset(ids) {
 }
 
 function messager(match, miss) {
-    var message = document.getElementById('message')
+    let message = document.getElementById('message')
     
     if (match == 3) {
         message.appendChild(document.createTextNode('YOU WIN!'))
