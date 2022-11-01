@@ -1,3 +1,4 @@
+- style background
 - animate card flip
 - show "obtained" item after every match
 - show losing message in the middle of the screen
