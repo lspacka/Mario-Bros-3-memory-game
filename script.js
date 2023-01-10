@@ -1,16 +1,9 @@
-/*  TODO:
-        * animate card flip
-        * show "obtained" item after every match
-        * show losing message in the middle of the screen
-        * put "Try Again" action in the losing message
-        * do hardReset after player loses 
-*/
-
 var cards = 
 [
     '1up', '10-coins', '20-coins', 
     'flower', 'mushroom', 'star'
 ]
+
 var ids = []  // Only keeps img ids when they are clicked for the first time
 var flipped = []  // Only keeps image names that are generated for the first time
 var all_ids = []  // Keeps all the clicked img ids
