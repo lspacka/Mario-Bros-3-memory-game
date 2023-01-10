@@ -1,15 +1,15 @@
-var cards = 
+let cards = 
 [
     '1up', '10-coins', '20-coins', 
     'flower', 'mushroom', 'star'
 ]
 
-var ids = []  // Only keeps img ids when they are clicked for the first time
-var flipped = []  // Only keeps image names that are generated for the first time
-var all_ids = []  // Keeps all the clicked img ids
-var clicked = []  // Keeps all the generated image names
-var match = 0
-var miss = 0
+let ids = []  // Only keeps img ids when they are clicked for the first time
+let flipped = []  // Only keeps image names that are generated for the first time
+let all_ids = []  // Keeps all the clicked img ids
+let clicked = []  // Keeps all the generated image names
+let match = 0
+let miss = 0
 
 
 function randomPicker(array) {
@@ -17,8 +17,8 @@ function randomPicker(array) {
 }
 
 function switcheroo(id) {
-    var image = document.getElementById(id)
-    var card = randomPicker(cards)
+    let image = document.getElementById(id)
+    let card = randomPicker(cards)
     
     if (!ids.includes(id)) {
         image.setAttribute('src', `images/${cards[card]}.jpg`)
