@@ -8,6 +8,32 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 11px;
   background-color: orange;
+  overflow: hidden;
+}
+
+#items-container {
+  position: fixed;
+  justify-self: left;
+  /*transform: translateX(-130px);*/
+  border: solid 1px black;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  width: fit-content;
+  height: fit-content;
+}
+
+.item {
+  width: 83px;
+  height: 83px;
+  margin: 5px;
 }
 
 #cards-container {
@@ -15,12 +41,13 @@ body {
   align-self: center;
   background-color: black;
   width:fit-content;
+  height: fit-content;
   padding: 10px;
   border-radius: 10px;
   margin: 0 auto;
+  transform: translateX(350px) translateY(-97px);
 }
-
-img {
+.card {
   margin: 10px;
 }
 
@@ -32,7 +59,7 @@ img {
 
 #toad {
   margin-left: calc(100vw - 370px);
-  transform: translateY(-98px);
+  transform: translateY(-90px);
   width: 40px;
 }
 

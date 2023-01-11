@@ -21,7 +21,7 @@ function switcheroo(id) {
     let card = randomPicker(cards)
     
     if (!ids.includes(id)) {
-        image.setAttribute('src', `images/${cards[card]}.jpg`)
+        image.setAttribute('src', `images/${cards[card]}.png`)
         flipped.push(cards[card])
         ids.push(id)
         clicked.push(cards[card])
@@ -29,7 +29,7 @@ function switcheroo(id) {
     } else {
         all_ids.push(id)
         let index = ids.indexOf(id)
-        image.setAttribute('src', `images/${flipped[index]}.jpg`)
+        image.setAttribute('src', `images/${flipped[index]}.png`)
         clicked.push(flipped[index])
     }
     
@@ -48,14 +48,14 @@ function cardCheck(clicked) {
             setTimeout(softReset, 700, all_ids)
             miss++
         }
-        setTimeout(messager, 500, match, miss)
+        //setTimeout(messager, 500, match, miss)
     }
 }
 
 function softReset(ids) {
     for (let i=ids.length-2; i<=ids.length-1; i++) {
         let card = document.getElementById(ids[i])
-        card.setAttribute('src', 'images/ace-of-spade.jpg')
+        card.setAttribute('src', 'images/ace-of-spade.png')
     }
 }
 
@@ -72,10 +72,12 @@ function messager(match, miss) {
 
 function hardReset() {
     let message = document.getElementById('message')
-    let cards = document.querySelectorAll('img')
-
+    //let cards = document.querySelectorAll('img')
+    let cards = document.getElementById('cards-container')
+    cards = cards.children
+    
     for (i=0; i<cards.length; i++) {
-        cards[i].setAttribute('src', 'images/ace-of-spade.jpg')
+        cards[i].setAttribute('src', 'images/ace-of-spade.png')
     }
     ids = []
     all_ids = []
