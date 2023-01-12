@@ -1,7 +1,8 @@
 - style background
 - animate card flip
+- animate items showing
 - show "obtained" item after every match
 - show losing message in the middle of the screen
 - put "Try Again" action in the losing message
-- do hardReset after player loses 
+- stop game after player loses 
 - use sounds and music from the original game
