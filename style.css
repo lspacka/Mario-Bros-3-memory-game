@@ -13,18 +13,25 @@ body {
 
 #items-container {
   position: fixed;
-  /*justify-self: left;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   transform: translateY(13px) translateX(15px);
-  border: solid 1px black;
+  border: none 1px black;
   border-radius: 5px;
   width: fit-content;
+  /*max-width: 181px;*/
   height: fit-content;
   background-color: white;
-  padding-top: 5px;
+  /*padding-top: 5px;
   padding-left: 10px;
-  padding-right: 10px;
-  /*overflow: hidden;*/
+  padding-right: 10px;*/
+  overflow: hidden;
 }
+
+/*#items {
+  display: grid;
+  grid-template-columns: 2 1fr; 
+}*/
 
 .row {
   width: fit-content;
@@ -33,9 +40,10 @@ body {
 }
 
 .item {
-  width: 83px;
-  height: 83px;
-  margin: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: 7px;
+  overflow: hidden;
 }
 
 #cards-container {

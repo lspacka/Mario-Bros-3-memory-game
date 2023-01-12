@@ -10,6 +10,7 @@ let all_ids = []  // Keeps all the clicked img ids
 let clicked = []  // Keeps all the generated image names
 let match = 0
 let miss = 0
+let count = 0
 
 
 function randomPicker(array) {
@@ -42,6 +43,7 @@ function cardCheck(clicked) {
     // if (clicked.length-2 == clicked.length-1) => Why replacing the loop with this doesn't work?
     for (let i=clicked.length-2; i<clicked.length-1; i+=2) {
         if (clicked[i] == clicked[i+1]){
+            showItem(clicked[i])
             match++
             miss--
         } else {
@@ -51,6 +53,50 @@ function cardCheck(clicked) {
         //setTimeout(messager, 500, match, miss)
     }
 }
+
+function showItem(card) {
+    let items = document.getElementById('items-container')
+    //let row = document.createElement('div')
+    let item = document.createElement('img')
+    /*if (items.childNodes.length >= 2) {
+        item.setAttribute('src', `images/item-${card}.png`)
+        item.setAttribute('class', 'item')
+        let row = document.createElement('div')
+        row.appendChild(item)
+        items.appendChild(row)
+    }*/
+    
+    //if (items.childNodes.length == 0 || items.childNodes.length == 2) {        // Node.hasChildNodes not working for some reason...
+        //count++
+        //row.setAttribute('id', count) 
+        //row.setAttribute('class', 'row')
+        item.setAttribute('src', `images/item-${card}.png`)
+        item.setAttribute('class', 'item')
+        //row.appendChild(item)
+        items.appendChild(item)
+    /*} else if (items.childNodes.length == 1) {
+        item.setAttribute('src', `images/item-${card}.png`)
+        item.setAttribute('class', 'item')
+        //row.appendChild(item)
+        items.appendChild(item)
+    }*/
+    /*if (row.childNodes.length == 0 || row.childNodes.length == 2) {
+        var item = document.createElement('img')
+        count++ 
+        row.setAttribute('class', 'row')
+        row.setAttribute('id', count)
+        item.setAttribute('src', `images/item-${card}.png`)
+        item.setAttribute('class', 'item')
+        row.appendChild(item)
+        items.appendChild(row)
+    } else if (row.childNodes.length == 1) {
+        let item = document.createElement('img')
+        let row = document.getElementById(count)
+        item.setAttribute('src', `images/item-${card}.png`)
+        item.setAttribute('class', 'item')
+        row.appendChild(item)
+    } */    
+} 
 
 function softReset(ids) {
     for (let i=ids.length-2; i<=ids.length-1; i++) {
@@ -72,7 +118,7 @@ function messager(match, miss) {
 
 function hardReset() {
     let message = document.getElementById('message')
-    //let cards = document.querySelectorAll('img')
+    let items = document.getElementById('items-container')
     let cards = document.getElementById('cards-container')
     cards = cards.children
     
@@ -85,6 +131,8 @@ function hardReset() {
     clicked = []
     match = 0
     miss = 0
+    count = 0
+    items.innerHTML = ''
     message.innerText = ''
     console.clear()
 }
