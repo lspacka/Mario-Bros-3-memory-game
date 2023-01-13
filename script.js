@@ -35,14 +35,16 @@ function switcheroo(id) {
     }
     
     if (clicked.length%2 == 0) {
-        cardCheck(clicked)
+        cardCheck(clicked, flipped)
     }
 }
 
-function cardCheck(clicked) {
+function cardCheck(clicked, flipped) {
+    //let item = flipped[flipped.length-1]
     // if (clicked.length-2 == clicked.length-1) => Why replacing the loop with this doesn't work?
     for (let i=clicked.length-2; i<clicked.length-1; i+=2) {
         if (clicked[i] == clicked[i+1]){
+            //console.log(item)
             showItem(clicked[i])
             match++
             miss--
@@ -56,46 +58,10 @@ function cardCheck(clicked) {
 
 function showItem(card) {
     let items = document.getElementById('items-container')
-    //let row = document.createElement('div')
     let item = document.createElement('img')
-    /*if (items.childNodes.length >= 2) {
-        item.setAttribute('src', `images/item-${card}.png`)
-        item.setAttribute('class', 'item')
-        let row = document.createElement('div')
-        row.appendChild(item)
-        items.appendChild(row)
-    }*/
-    
-    //if (items.childNodes.length == 0 || items.childNodes.length == 2) {        // Node.hasChildNodes not working for some reason...
-        //count++
-        //row.setAttribute('id', count) 
-        //row.setAttribute('class', 'row')
-        item.setAttribute('src', `images/item-${card}.png`)
-        item.setAttribute('class', 'item')
-        //row.appendChild(item)
-        items.appendChild(item)
-    /*} else if (items.childNodes.length == 1) {
-        item.setAttribute('src', `images/item-${card}.png`)
-        item.setAttribute('class', 'item')
-        //row.appendChild(item)
-        items.appendChild(item)
-    }*/
-    /*if (row.childNodes.length == 0 || row.childNodes.length == 2) {
-        var item = document.createElement('img')
-        count++ 
-        row.setAttribute('class', 'row')
-        row.setAttribute('id', count)
-        item.setAttribute('src', `images/item-${card}.png`)
-        item.setAttribute('class', 'item')
-        row.appendChild(item)
-        items.appendChild(row)
-    } else if (row.childNodes.length == 1) {
-        let item = document.createElement('img')
-        let row = document.getElementById(count)
-        item.setAttribute('src', `images/item-${card}.png`)
-        item.setAttribute('class', 'item')
-        row.appendChild(item)
-    } */    
+    item.setAttribute('src', `images/item-${card}.png`)
+    item.setAttribute('class', 'item')
+    items.appendChild(item)
 } 
 
 function softReset(ids) {
