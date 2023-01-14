@@ -4,16 +4,17 @@ let cards =
     'flower', 'mushroom', 'star'
 ]
 
-let end = ['sorry1', 'sorry2']
+let end = 
+[
+    'sorry1', 'sorry2', 'sorry3', 'sorry4', 
+    'sorry5', 'sorry6', 'sorry7', 'sorry8'
+]
 
 let ids = []  // Only keeps img ids that are clicked for the first time
 let flipped = []  // Only keeps image names that are generated for the first time
 let all_ids = []  // Keeps all the clicked img ids
 let clicked = []  // Keeps all the generated image names
-//let match = 0
 let miss = 0
-let count = 0
-
 
 function randomPicker(array) {
     return Math.floor(Math.random() * array.length)
@@ -42,13 +43,10 @@ function switcheroo(id) {
 }
 
 function cardCheck(clicked) {
-    //let item = flipped[flipped.length-1]
     // if (clicked.length-2 == clicked.length-1) => Why replacing the loop with this doesn't work?
     for (let i=clicked.length-2; i<clicked.length-1; i+=2) {
         if (clicked[i] == clicked[i+1]){
-            //console.log(item)
             showItem(clicked[i])
-            //match++
         } else {
             setTimeout(softReset, 600, all_ids)
             miss++
@@ -116,7 +114,6 @@ function hardReset() {
     clicked = []
     match = 0
     miss = 0
-    count = 0
     items.innerHTML = ''
     cards.removeChild(message)
     console.clear()

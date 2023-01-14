@@ -8,7 +8,7 @@
 =======
 - style background
 - animate card flip
-- animate items showing
++ animate items showing
 + show "obtained" item after every match
 + show losing message in the middle of the screen00 
 - use sounds and music from the original game
