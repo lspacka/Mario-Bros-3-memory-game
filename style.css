@@ -40,7 +40,7 @@ body {
   margin: 7px;
   overflow: hidden;
   border-radius: 4px;
-  animation: popr .2s ease forwards;
+  animation: popr .1s ease forwards;
 }
 
 #cards-container {

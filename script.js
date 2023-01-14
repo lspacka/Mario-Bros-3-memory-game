@@ -10,7 +10,7 @@ let ids = []  // Only keeps img ids that are clicked for the first time
 let flipped = []  // Only keeps image names that are generated for the first time
 let all_ids = []  // Keeps all the clicked img ids
 let clicked = []  // Keeps all the generated image names
-let match = 0
+//let match = 0
 let miss = 0
 let count = 0
 
