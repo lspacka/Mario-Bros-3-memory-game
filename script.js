@@ -76,7 +76,6 @@ function youLose() {
     let msg_box = document.getElementById('cards-container')
     let message = document.createElement('div')
     let sorry = randomPicker(end)
-    //message.appendChild(document.createTextNode('YOU LOSE!!!'))
     message.innerHTML = `<p>SORRY</p><p><img src="images/${end[sorry]}.png"></p>`
     message.setAttribute('id', 'message')
     msg_box.innerHTML = ''
