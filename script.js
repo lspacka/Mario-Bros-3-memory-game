@@ -54,7 +54,7 @@ function cardCheck(clicked) {
             miss++
         }
     }
-    if (miss == 3) setTimeout(youLose, 300)
+    if (miss == 3) setTimeout(youLose, 400)
 }
 
 function showItem(card) {

@@ -28,10 +28,6 @@ body {
   overflow: hidden;
 }
 
-.item {
-  border-radius: 4px;
-}
-
 .row {
   width: fit-content;
   height: fit-content;
@@ -43,6 +39,8 @@ body {
   height: fit-content;
   margin: 7px;
   overflow: hidden;
+  border-radius: 4px;
+  animation: popr .2s ease forwards;
 }
 
 #cards-container {
@@ -101,4 +99,13 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   text-align:justify;
+}
+
+@keyframes popr {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
