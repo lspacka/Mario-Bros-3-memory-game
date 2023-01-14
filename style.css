@@ -21,17 +21,16 @@ body {
   width: fit-content;
   /*max-width: 181px;*/
   height: fit-content;
-  background-color: white;
+  background-color: orange;
   /*padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;*/
   overflow: hidden;
 }
 
-/*#items {
-  display: grid;
-  grid-template-columns: 2 1fr; 
-}*/
+.item {
+  border-radius: 4px;
+}
 
 .row {
   width: fit-content;
@@ -53,19 +52,22 @@ body {
   background-color: black;
   width:fit-content;
   height: fit-content;
+  min-width: 795.017px;
+  min-height: 518.3px;
   padding: 10px;
   border-radius: 10px;
   margin: 0 auto;
   transform: translateY(5px);
+  
 }
 .card {
   margin: 10px;
 }
 
 #message {
-  font-family: comic sans ms;
-  font-size: 25px;
-  margin-left: 20px;
+  font-size: 65px;
+  color: white;
+  text-align: center;
 }
 
 #toad {
