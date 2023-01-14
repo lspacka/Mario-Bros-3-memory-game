@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 - style background
 - animate card flip
 - animate items showing
 + show "obtained" item after every match
 + show losing message in the middle of the screen00 
 - use sounds and music from the original game
+=======
+- style background
+- animate card flip
+- animate items showing
++ show "obtained" item after every match
++ show losing message in the middle of the screen00 
+- use sounds and music from the original game
+>>>>>>> a52950dc96e4dd9aeb3da576907ddbc44acb6395
