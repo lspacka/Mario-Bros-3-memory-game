@@ -1,20 +1,19 @@
-let cards = 
-[
+let miss = 0
+let ids = []      // Only keeps img ids that are clicked for the first time
+let flipped = []  // Only keeps image names that are generated for the first time
+let all_ids = []  // Keeps all the clicked img ids
+let clicked = []  // Keeps all the generated image names
+
+let cards = [
     '1up', '10-coins', '20-coins', 
     'flower', 'mushroom', 'star'
 ]
 
-let end = 
-[
+let end = [
     'sorry1', 'sorry2', 'sorry3', 'sorry4', 
     'sorry5', 'sorry6', 'sorry7', 'sorry8'
 ]
 
-let ids = []  // Only keeps img ids that are clicked for the first time
-let flipped = []  // Only keeps image names that are generated for the first time
-let all_ids = []  // Keeps all the clicked img ids
-let clicked = []  // Keeps all the generated image names
-let miss = 0
 
 function randomPicker(array) {
     return Math.floor(Math.random() * array.length)
@@ -26,6 +25,7 @@ function switcheroo(id) {
     
     if (!ids.includes(id)) {
         image.setAttribute('src', `images/${cards[card]}.png`)
+        //image.removeAttribute('onclick')  tryna fix the clicking issue 
         flipped.push(cards[card])
         ids.push(id)
         clicked.push(cards[card])
@@ -48,7 +48,7 @@ function cardCheck(clicked) {
         if (clicked[i] == clicked[i+1]){
             showItem(clicked[i])
         } else {
-            setTimeout(softReset, 600, all_ids)
+            setTimeout(softReset, 500, all_ids)
             miss++
         }
     }
@@ -74,7 +74,7 @@ function youLose() {
     let msg_box = document.getElementById('cards-container')
     let message = document.createElement('div')
     let sorry = randomPicker(end)
-    message.innerHTML = `<p>SORRY</p><p><img src="images/${end[sorry]}.png"></p>`
+    message.innerHTML = `<p>TOO BAD!</p><p><img src="images/${end[sorry]}.png"></p>`
     message.setAttribute('id', 'message')
     msg_box.innerHTML = ''
     msg_box.appendChild(message)
