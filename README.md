@@ -2,8 +2,9 @@
 
 A beginner project recreating this classic mini game
 
+Live page: https://lspacka.github.io/Mario-Bros-3-memory-game/
 
-sprites:
+Sprites:
     
     https://www.spriters-resource.com/nes/supermariobros3/sheet/4230/
     https://www.spriters-resource.com/nes/supermariobros3/sheet/105023/
