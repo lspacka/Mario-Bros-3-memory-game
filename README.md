@@ -2,6 +2,7 @@
 
 A beginner project recreating this classic mini game
 
+Live page: https://lspacka.github.io/Mario-Bros-3-memory-game/
 
 sprites:
     
