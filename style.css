@@ -1,21 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap'); */
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  min-height: 0;
 }
 
 body {
+  /* display: flex; */
+  /* place-content: center; */
+  padding: 0.5em 0;
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 11px;
+  /* font-size: 16px; */
   background-color: orange;
-  overflow: hidden;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* img {
+  max-inline-size: 70%;
+} */
+
+p:not(#message) {
+  font-size: .8rem;
 }
 
 #items-container {
   position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  transform: translateY(13px) translateX(15px);
+  transform: translateY(6px) translateX(15px);
   border: none 1px black;
   /*border-radius: 5px;*/
   width: fit-content;
@@ -25,81 +40,122 @@ body {
   /*padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;*/
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .row {
   width: fit-content;
   height: fit-content;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .item {
   width: fit-content;
   height: fit-content;
   margin: 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 4px;
   animation: popr .2s ease-in forwards;
 }
 
 #cards-container {
-  position: relative;
+  /* position: relative; */
   /*justify-self: center;
   align-self: center;*/
+  display: flex;
+  /* place-content: center; */
   background-color: black;
   width:fit-content;
-  height: fit-content;
-  min-width: 795.017px;
-  min-height: 518.3px;
-  padding: 10px;
+  width: 56%;
+  max-width: 1200px;
+  /* height: fit-content; */
+  /* max-height: 80%; */
+  /* min-width: 795.017px; */
+  /* min-height: 518.3px; */
+  padding: 1em;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 60px;
-  transform: translateY(5px);
-  
+  margin: .8em auto;
+  /* margin-top: 60px; */
+  /* transform: translateY(5px); */
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+}
+
 .card {
-  margin: 10px;
+  margin: 0.4em ;
+  max-inline-size: 100%;
 }
 
 #message {
-  font-size: 65px;
   color: white;
   text-align: center;
 }
 
 #toad {
-  margin-left: calc(100vw - 470px);
-  transform: translateY(-85px);
+  /* margin-left: calc(100vw - 470px); */
+  /* transform: translateY(-85px); */
+  /* display: inline-block; */
+  transform: translateX(2em);
   width: 40px;
+  /* vertical-align: center; */
+  flex-grow: 0;
 }
 
 #reset {
-  margin-left: 395px;
+  /* margin-left: 395px; */
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   background: white;
   border: none;
   padding: 7px;
   color:rgb(38, 114, 114);
-  transform: translateY(-25px);
+  transition: ease-in .3s;
+  /* transform: translateY(-25px); */
 }
 
 #reset:hover {
   cursor: pointer;
+  color: rebeccapurple;
 }
 
 #toad-msg {
+  display: flex;
+  justify-content: space-evenly;
   background-color: white;
   border-radius: 15px;
-  padding-left: 20px;
-  padding-top: 1px;
-  height: 80px;
-  margin-bottom: 10px;
+  padding: 1em;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.87rem;
+  /* padding: 0 1em; */
+  /* padding-left: 20px; */
+  /* padding-top: 1px; */
+  /* height: 80px; */
+  /* margin-bottom: 10px;
   margin-left: 10%;
-  margin-right: 10%;
-  text-align:justify;
+  margin-right: 10%; */
+  /* text-align:justify; */
+}
+
+.header {
+  padding-top: .9em;
+  /* height: fit-content; */
+  /* vertical-align: center; */
+}
+
+.header > p {
+  margin-bottom: .7em;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: .5fr 1fr;
 }
 
 @keyframes popr {
