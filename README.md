@@ -1,10 +1,10 @@
-# Super Mario Bros 3 memory game
+# Super Mario Bros 3 Card Game
 
 A beginner project recreating this classic mini game
 
-Live page: https://lspacka.github.io/Mario-Bros-3-memory-game/
+[Play it Here](https://lspacka.github.io/Mario-Bros-3-memory-game/)
 
-Sprites:
+#### Sprites From:
     
 https://www.spriters-resource.com/nes/supermariobros3/sheet/4230/
     

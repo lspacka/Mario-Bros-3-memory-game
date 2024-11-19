@@ -39,11 +39,10 @@ function switcheroo(id) {
     
     if (clicked.length%2 == 0) {
         cardCheck(clicked)
-    }
+    } 
 }
 
 function cardCheck(clicked) {
-    // if (clicked.length-2 == clicked.length-1) => Why replacing the loop with this doesn't work?
     for (let i=clicked.length-2; i<clicked.length-1; i+=2) {
         if (clicked[i] == clicked[i+1]){
             showItem(clicked[i])
@@ -74,9 +73,12 @@ function youLose() {
     let msg_box = document.getElementById('cards-container')
     let message = document.createElement('div')
     let sorry = randomPicker(end)
-    message.innerHTML = `<p>TOO BAD!</p><p><img src="images/${end[sorry]}.png"></p>`
+    message.innerHTML = `<p class="too-bad">TOO BAD!</p><p><img class="sorry" src="images/${end[sorry]}.png"></p>`
     message.setAttribute('id', 'message')
     msg_box.innerHTML = ''
+    msg_box.style.display = 'flex'
+    msg_box.style.height = '505px'
+    message.style.placeSelf = 'center'
     msg_box.appendChild(message)
 }
 
@@ -84,7 +86,11 @@ function hardReset() {
     let message = document.getElementById('message')
     let items = document.getElementById('items-container')
     let cards = document.getElementById('cards-container')
+    // let cards = document.getElementById('cards')
+    // let cards = document.createElement('div')
+    // cards.setAttribute('id', 'cards')
     let br
+    console.log(cards)
 
     if (cards.childNodes.length == 1) {
         for (let i=1; i<=18; i++) {
@@ -95,11 +101,11 @@ function hardReset() {
             card.setAttribute('id', i)
             card.setAttribute('onclick', 'switcheroo(this.id)')
             cards.appendChild(card)
-            cards.appendChild(newline)
-            if (i==6 || i==12) {
-                br = document.createElement('br')
-                cards.appendChild(br)
-            }
+            // cards.appendChild(newline)
+            // if (i==6 || i==12) {
+            //     br = document.createElement('br')
+            //     cards.appendChild(br)
+            // }
         }
     } else {
         cards = cards.children
@@ -107,6 +113,8 @@ function hardReset() {
             cards[i].setAttribute('src', 'images/ace-of-spade.png')
         }
     }
+
+    // cards_container.append(cards)
     
     ids = []
     all_ids = []
@@ -116,5 +124,6 @@ function hardReset() {
     miss = 0
     items.innerHTML = ''
     cards.removeChild(message)
+    cards.style.display = 'grid'
     console.clear()
 }
