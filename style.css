@@ -12,10 +12,6 @@ body {
   min-height: 100vh;
 }
 
-/* img {
-  max-inline-size: 70%;
-} */
-
 p:not(.too-bad) {
   font-size: .8rem;
 }
@@ -45,9 +41,7 @@ p:not(.too-bad) {
 
 #cards-container {
   background-color: black;
-  /* width:fit-content; */
   width: 56%;
-  /* max-height: 505px; */
   max-width: 1200px;
   padding: 1em;
   border-radius: 10px;
@@ -57,13 +51,6 @@ p:not(.too-bad) {
   grid-template-rows: repeat(3, 1fr);
   place-content: center;
 }
-
-/* #cards {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin: 0 auto;
-} */
 
 .card {
   margin: 0.4em ;
@@ -75,8 +62,6 @@ p:not(.too-bad) {
   color: white;
   text-align: center;
   font-size: 5rem;
-  /* margin: 0 auto; */
-  /* height: fit-content; */
 }
 
 #toad {
