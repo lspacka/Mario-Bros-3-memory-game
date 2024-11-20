@@ -1,9 +1,8 @@
-let miss = 0
 let ids = []      // Only keeps img ids that are clicked for the first time
 let flipped = []  // Only keeps image names that are generated for the first time
 let all_ids = []  // Keeps all the clicked img ids
 let clicked = []  // Keeps all the generated image names
-// let lost
+let miss = 0
 
 let cards = [
     '1up', '10-coins', '20-coins', 
@@ -36,7 +35,7 @@ function switcheroo(id) {
         image.setAttribute('src', `images/${flipped[index]}.png`)
         clicked.push(flipped[index])
     }
-    
+
     if (clicked.length%2 == 0) {
         cardCheck(clicked, all_ids)
     }
@@ -48,29 +47,23 @@ function cardCheck(clicked, ids) {
     let j = 0
 
     for (let i = clicked.length-2; i < clicked.length-1; i += 2) {
-        if (clicked[i] == clicked[i+1]){
+        if (clicked[i] == clicked[i + 1]){
             showItem(clicked[i])
-            // id = ids[i]
-            // image = document.getElementById(id)
-            // image.removeAttribute('onclick')
-            // id = ids[i + 1]
-            // image = document.getElementById(id)
-            // image.removeAttribute('onclick')
-            // prevents matching cards to trigger onclick function
+
+            // prevent matching cards from triggering onclick
             while (j < 2) {
                 id = ids[i + j]
                 image = document.getElementById(id)
                 image.removeAttribute('onclick')
                 j++
             }
-            console.log(clicked[i])
         } else {
             setTimeout(softReset, 500, all_ids)
             miss++
         }
     }
+    flipped_count = 0
     if (miss == 3) {
-        // lost = true
         setTimeout(youLose, 400)
     }
 }
@@ -100,7 +93,7 @@ function youLose() {
     message.setAttribute('id', 'message')
     msg_box.innerHTML = ''
     msg_box.style.display = 'flex'
-    msg_box.style.height = '505px'
+    msg_box.style.height = '80vh'
     message.style.placeSelf = 'center'
     msg_box.appendChild(message)
 }
@@ -113,7 +106,6 @@ function hardReset() {
     if (cards.childNodes.length == 1) {
         for (let i = 1; i <= 18; i++) {
             let card = document.createElement('img')
-            let newline = document.createTextNode('\n      ')
             card.setAttribute('src', 'images/ace-of-spade.png')
             card.setAttribute('class', 'card')
             card.setAttribute('id', i)

@@ -75,7 +75,7 @@ p:not(.too-bad) {
 }
 
 #reset {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: inherit;
   font-size: 1rem;
   background: white;
   border: none;
